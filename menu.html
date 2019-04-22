@@ -1,0 +1,206 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+<title>GOWTHAMRAJHOTEL</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<link href="https://fonts.googleapis.com/css?family=Montserrat|Ravi+Prakash" rel="stylesheet">
+</head>
+<style>
+.modal {
+    display: none;
+    position: fixed; 
+    z-index: 1; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.4);
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; 
+}
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+body {
+background-image: url("download.png");
+background-repeat: no-repeat;
+background-position: center;
+background-attachment: fixed;
+background-size:  95% 110%;
+}
+h1{
+font-family: 'Ravi Prakash', cursive;
+  font-size: 80px;
+  color: cornflowerblue;
+  line-height: 100%;
+}
+h3{
+    font-family: 'Ravi Prakash', cursive;
+    font-size: 30px;
+    color: cornflowerblue;
+    line-height: 0px;
+}
+.list{
+    font-family: "Palatino Linotype";
+    font-size: 25px;
+    color: cornflowerblue;
+}
+.ulist1{
+    font-family: "Palatino Linotype";
+    font-size: 20px;
+}
+</style>
+<script>
+var ans;
+</script>
+<body>
+
+    <div class="container">
+        <h1 class="text-center">MENU</h1>
+    <h3 class="text-center">Taste the most delicious.....</h3>
+    <br>
+    <br>
+                <div id="myModal" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <form role="form" class="form-group" onsubmit="return false">
+    <label><strong><span style="font-family: 'Ravi Prakash', cursive; font-size: 25px;">Enter Quantity</span></strong></label>
+    <input type="number" id="quanitem1" class="form-control" placeholder="Enter Quantity...." required></input><br>
+    <button class="form-control btn btn-success" onclick="myfun('myModal','quanitem1','Idlys','15')">Bring It On</button>
+    </form>
+  </div>
+</div>
+                <div id="myModal2" class="modal" onsubmit="return false">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <form role="form" class="form-group">
+    <label><strong><span style="font-family: 'Ravi Prakash', cursive; font-size: 25px;">Enter Quantity</span></strong></label>
+    <input type="number" id="quanitem2" class="form-control" placeholder="Enter Quantity...." required></input><br>
+    <button class="form-control btn btn-success" onclick="myfun('myModal2','quanitem2','Dosa','20')">Bring It On</button>
+    </form>
+  </div>
+</div>
+                <div id="myModal3" class="modal" onsubmit="return false">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <form role="form" class="form-group">
+    <label><strong><span style="font-family: 'Ravi Prakash', cursive; font-size: 25px;">Enter Quantity</span></strong></label>
+    <input type="number" id="quanitem3" class="form-control" placeholder="Enter Quantity...." required></input><br>
+    <button class="form-control btn btn-success" onclick="myfun('myModal3','quanitem3','Chappathi','20')">Bring It On</button>
+    </form>
+  </div>
+</div>
+                <div id="myModal4" class="modal" onsubmit="return false">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <form role="form" class="form-group">
+    <label><strong><span style="font-family: 'Ravi Prakash', cursive; font-size: 25px;">Enter Quantity</span></strong></label>
+    <input type="number" id="quanitem4" class="form-control" placeholder="Enter Quantity...." required></input><br>
+    <button class="form-control btn btn-success" onclick="myfun('myModal4','quanitem4','Parotta','25')">Bring It On</button>
+    </form>
+  </div>
+</div>
+                <div id="myModal5" class="modal" onsubmit="return false">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <form role="form" class="form-group">
+    <label><strong><span style="font-family: 'Ravi Prakash', cursive; font-size: 25px;">Enter Quantity</span></strong></label>
+    <input type="number" id="quanitem5" class="form-control" placeholder="Enter Quantity...." required></input><br>
+    <button class="form-control btn btn-success" onclick="myfun('myModal5','quanitem5','Poori','30')">Bring It On</button>
+    </form>
+  </div>
+</div>
+                <div id="myModal6" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <strong><p><span style="font-family: 'Ravi Prakash', cursive; font-size: 25px;">You have ordered</span><br>
+    <ul id="ulist" class="ulist1">
+    </ul>
+  </div>
+</div>
+    <div class="list">
+        <strong>
+    <ol>
+        <li> <em>Idly</em>............................ Rs.15 <span style="color: white">hhhhhhh</span><button class="btn btn-md  btn-danger" id="but1" onclick="nfn('but1','myModal')">Order</button></li><br>
+        <li> <em>Dosa</em>.......................... Rs.20 <span style="color: white">hhhhhhh</span><button class="btn btn-md  btn-danger" id="but2" onclick="nfn('but2','myModal2')">Order</button></li><br>
+        <li> <em>Chappathi</em>................ Rs.20 <span style="color: white">hhhhhhh</span><button class="btn btn-md  btn-danger" id="but3" onclick="nfn('but3','myModal3')">Order</button></li><br>
+        <li> <em>Parotta</em>......................Rs.25 <span style="color: white">hhhhhhh</span><button class="btn btn-md  btn-danger" id="but4" onclick="nfn('but4','myModal4')">Order</button></li><br>
+        <li> <em>Poori</em>..........................Rs.30 <span style="color: white">hhhhhhh</span><button class="btn btn-md  btn-danger" id="but5" onclick="nfn('but5','myModal5')">Order</button></li><br>
+            </ol>
+            </strong>
+            </div>
+           <p align="center"><button class="btn btn-primary btn-lg" style="width: 20em;" onclick="endfn()">Finish</button></p>
+    </div>
+
+<script>
+var tot=0;
+function nfn(b,m){
+
+var modal = document.getElementById(m);
+var btn = document.getElementById(b);
+var span = document.getElementsByClassName("close")[0];
+btn.onclick = function() {
+    modal.style.display = "block";
+}
+span.onclick = function() {
+    modal.style.display = "none";
+}
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+}
+function myfun(m,quan,item,num)
+{
+    var mem=document.getElementById(m);
+    mem.style.display="none";
+        var cost=0;
+  var quan1=document.getElementById(quan).value;
+   var cost1=parseInt(quan1);
+   var cost2=parseInt(num);
+   var cost=cost1*cost2;
+   tot+=cost;
+  alert("You have Ordered "+ quan1 + " "+ item);
+  var order=quan1+" "+item;
+  ans=tot;
+    var unorderlist=document.getElementById('ulist');
+    var newele=document.createElement('li');
+    newele.appendChild(document.createTextNode(order));
+    unorderlist.appendChild(newele);
+}
+function endfn(){
+var m=document.getElementById('myModal6');
+m.style.display="block";
+window.onclick = function(event) {
+    if (event.target == m) {
+        m.style.display = "none";
+    alert("The total cost is Rs." + tot);
+    location.reload();
+    }
+}
+
+}
+</script>
+</body>
+</html>
